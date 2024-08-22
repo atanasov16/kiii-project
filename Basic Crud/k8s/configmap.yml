@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: basic-crud-config
+  namespace: basic-crud
+data:
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/basic-crud"

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  namespace: basic-crud
+data:
+  POSTGRES_DB: "basic-crud"
+  POSTGRES_USER: "postgres"
+  POSTGRES_PASSWORD: "password"

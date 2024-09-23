@@ -26,9 +26,11 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./basic-crud
+          file: ./basic-crud/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/basic-crud:latest
+
 
       - name: Deploy to Kubernetes
         if: github.ref == 'refs/heads/main'

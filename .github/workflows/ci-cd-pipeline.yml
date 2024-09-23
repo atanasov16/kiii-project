@@ -27,6 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./Basic-Crud
+          file: ./Basic-Crud/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/basic-crud:latest
 

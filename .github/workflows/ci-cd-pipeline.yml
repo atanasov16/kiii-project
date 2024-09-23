@@ -31,7 +31,7 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/basic-crud:latest
 
       - name: Deploy to Kubernetes
-        if: github.ref == 'refs/heads/master' #set to an imaginary branch so that it gets ignored (I'm facing an unexpected problem with Kubernetes)
+        if: github.ref == 'refs/heads/ERROR' #set to an imaginary branch so that it gets ignored (I'm facing an unexpected problem with Kubernetes)
         run: |
           kubectl apply -f Basic-Crud/k8s/deployment.yml --validate=false
           kubectl apply -f Basic-Crud/k8s/service.yml --validate=false
